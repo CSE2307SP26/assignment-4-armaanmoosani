@@ -14,7 +14,7 @@ class SpellCheckerTest {
 	}
 
 	@Test
-	void addWord() {
+	void addWords() {
 		SpellChecker checker = new SpellChecker();
 		int words = checker.getNumberofWords();
 		checker.addWord("test");
@@ -33,11 +33,11 @@ class SpellCheckerTest {
 	void spelledCorrectly(){
 		SpellChecker checker = new SpellChecker();
 		checker.addWord("cat");
-		checker.addWord("test");
+		checker.addWord("tests");
 		checker.addWord("man");
 		checker.addWord("lap");
 		assertTrue(checker.isCorrect("cat"));
-    	assertTrue(checker.isCorrect("test"));
+    	assertTrue(checker.isCorrect("tests"));
 		assertTrue(checker.isCorrect("man"));
     	assertTrue(checker.isCorrect("lap"));
 	}
